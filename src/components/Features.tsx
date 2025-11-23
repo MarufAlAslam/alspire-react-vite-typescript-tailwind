@@ -110,7 +110,7 @@ function Card({ card, index }: { card: typeof cards[0]; index: number }) {
 
 export function Features() {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-gradient-to-b from-secondary/20 to-[#F5F5F5]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
