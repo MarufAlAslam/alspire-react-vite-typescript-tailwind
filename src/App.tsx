@@ -1,15 +1,13 @@
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
-import { Showcase } from "./components/Showcase";
-import { Footer } from "./components/Footer";
+import { Features } from "./components/Features";
 
 function App() {
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <Showcase />
-      <Footer />
+      <Features />
     </div>
   );
 }
