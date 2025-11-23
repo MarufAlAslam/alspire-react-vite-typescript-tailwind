@@ -61,7 +61,7 @@ export function Hero() {
           </button>
 
           <button className="bg-white border-2 border-gray-200 text-black text-[16px] font-semibold px-8 py-[14px] rounded-[15px] transition-all duration-200 relative overflow-hidden group flex items-center justify-center">
-            <span className="inline-block transition-transform duration-300 ease-in-out group-hover:-translate-y-[150%] whitespace-nowrap flex items-center gap-2">
+            <span className="transition-transform duration-300 ease-in-out group-hover:-translate-y-[150%] whitespace-nowrap flex items-center gap-2">
               Request a Demo
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
