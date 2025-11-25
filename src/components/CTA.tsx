@@ -17,8 +17,8 @@ const sliderImages = [
 ];
 
 export function CTA() {
-  // Duplicate images for seamless loop
-  const duplicatedImages = [...sliderImages, ...sliderImages, ...sliderImages];
+  // Duplicate images for seamless loop (enough to cover visible area)
+  const duplicatedImages = [...sliderImages, ...sliderImages];
 
   return (
     <section className="py-20 px-4 bg-[#F5F5F5]">
@@ -26,7 +26,7 @@ export function CTA() {
         <div className="bg-[#141414] rounded-[60px] overflow-hidden relative">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left Side - Content */}
-            <div className="relative my-auto z-10 py-12 md:py-16 pl-12 md:pl-16 pr-4 xl:pr-0">
+            <div className="relative my-auto z-10 py-12 md:py-16 pl-6 md:pl-16 pr-6 xl:pr-0">
               <span className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
                 Get Started Now!
               </span>
@@ -67,7 +67,7 @@ export function CTA() {
             </div>
 
             {/* Right Side - Marquee (Vertical on desktop, Horizontal on mobile) */}
-            <div className="relative overflow-hidden pb-8 xl:pb-0">
+            <div className="relative m-auto overflow-hidden pb-8 xl:pb-0">
               {/* Horizontal slider for mobile/tablet (< 1200px) */}
               <motion.div
                 className="flex xl:hidden gap-6"
@@ -98,33 +98,33 @@ export function CTA() {
               </motion.div>
 
               {/* Vertical slider for desktop (>= 1200px) */}
-                <motion.div
-                  className="hidden xl:flex flex-col gap-6 justify-end h-[600px]"
-                  animate={{
-                    y: [0, -1 * (330 + 24) * duplicatedImages.length],
-                  }}
-                  transition={{
-                    y: {
-                      repeat: Infinity,
-                      repeatType: "loop",
-                      duration: 40,
-                      ease: "linear",
-                    },
-                  }}
-                >
-                  {duplicatedImages.map((item, index) => (
-                    <div
-                      key={`${item.id}-${index}`}
-                      className="flex-shrink-0 w-[330px] h-[330px] rounded-[32px] overflow-hidden"
-                    >
-                      <img
-                        src={item.image}
-                        alt={`Slide ${item.id}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </motion.div>
+              <motion.div
+                className="hidden xl:flex flex-col gap-6 justify-start h-[600px]"
+                animate={{
+                  y: [0, -1 * (330 + 24) * sliderImages.length],
+                }}
+                transition={{
+                  y: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 24,
+                    ease: "linear",
+                  },
+                }}
+              >
+                {duplicatedImages.map((item, index) => (
+                  <div
+                    key={`${item.id}-${index}`}
+                    className="flex-shrink-0 w-[330px] h-[330px] rounded-[32px] overflow-hidden"
+                  >
+                    <img
+                      src={item.image}
+                      alt={`Slide ${item.id}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </motion.div>
             </div>
           </div>
         </div>

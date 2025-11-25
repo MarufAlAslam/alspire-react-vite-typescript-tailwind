@@ -38,7 +38,7 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-white rounded-[60px] p-12 md:p-16"
+          className="bg-white rounded-[60px] px-3 py-12 md:p-16"
         >
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -61,7 +61,7 @@ export function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white border-2 border-[#F5F5F5] rounded-[40px] p-8 relative"
+                className="bg-white border-2 border-[#F5F5F5] rounded-[40px] p-6 md:p-8 relative"
               >
                 {/* Badge */}
                 <div className="flex justify-end mb-6">
