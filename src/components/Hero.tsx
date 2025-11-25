@@ -8,7 +8,7 @@ const sliderImages = [slider1, slider2, slider3, slider4];
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 pb-24 bg-gradient-to-b from-background to-secondary/20">
+    <section className="min-h-screen flex flex-col items-center justify-center px-0 pb-24 bg-gradient-to-b from-background to-secondary/20">
       <div className="max-w-5xl mx-auto text-center mb-12 space-y-6">
         {/* Badge */}
         <motion.div
