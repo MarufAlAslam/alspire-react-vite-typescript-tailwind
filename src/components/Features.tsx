@@ -123,7 +123,7 @@ export function Features() {
           <span className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
             Features
           </span>
-          <h2 className="text-[60px] font-bold leading-[1.1]">
+          <h2 className="text-[40px] xl:text-[60px] font-bold leading-[1.1]">
             <span className="text-black">Innovative</span>
             <br />
             <span style={{ color: "#B3B3B3" }}>AI Solutions</span>

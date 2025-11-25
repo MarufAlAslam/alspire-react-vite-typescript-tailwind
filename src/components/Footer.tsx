@@ -44,7 +44,7 @@ export function Footer() {
     <>
       <footer className="bg-[#F5F5F5] py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12">
             {/* Quick Links */}
             <div>
               <h3 className="text-[20px] font-bold text-black mb-6">Quick Links</h3>
@@ -98,8 +98,8 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Stay Connect */}
-            <div>
+            {/* Stay Connect - spans full width on mobile/tablet, 1 column on desktop */}
+            <div className="col-span-3 xl:col-span-1">
               <h3 className="text-[20px] font-bold text-black mb-6">Stay Connect</h3>
               <div className="flex gap-4">
                 {socialLinks.map((social) => (

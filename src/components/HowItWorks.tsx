@@ -53,11 +53,11 @@ export function HowItWorks() {
                     <span className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
                         How It Works
                     </span>
-                    <div className="flex items-start justify-between gap-8">
-                        <h2 className="text-[60px] font-bold leading-[1.1]">
+                    <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-8">
+                        <h2 className="text-[40px] xl:text-[60px] font-bold leading-[1.1]">
                             How AIspire Works
                         </h2>
-                        <p className="text-[18px] max-w-xl pt-2" style={{ color: "#1e1e1e" }}>
+                        <p className="text-[18px] xl:max-w-xl xl:pt-2" style={{ color: "#1e1e1e" }}>
                             Automate repetitive tasks and streamline workflows with intelligent AI-driven processes by AIspire.
                         </p>
                     </div>

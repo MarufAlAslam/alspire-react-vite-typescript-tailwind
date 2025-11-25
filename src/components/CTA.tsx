@@ -26,11 +26,11 @@ export function CTA() {
         <div className="bg-[#141414] rounded-[60px] overflow-hidden relative">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left Side - Content */}
-            <div className="relative my-auto z-10 py-12 md:py-16 pl-12 md:pl-16">
+            <div className="relative my-auto z-10 py-12 md:py-16 pl-12 md:pl-16 pr-4 xl:pr-0">
               <span className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
                 Get Started Now!
               </span>
-              <h2 className="text-[60px] font-bold leading-[1.1] text-white mb-6">
+              <h2 className="text-[40px] xl:text-[60px] font-bold leading-[1.1] text-white mb-6">
                 Ready to Unlock the Power of AI with Alspire?
               </h2>
               <p className="text-[18px] text-gray-400 mb-8 leading-relaxed">
@@ -66,10 +66,40 @@ export function CTA() {
               </div>
             </div>
 
-            {/* Right Side - Vertical Marquee */}
-            <div className="relative h-[600px] mx-auto overflow-hidden flex justify-end">
+            {/* Right Side - Marquee (Vertical on desktop, Horizontal on mobile) */}
+            <div className="relative overflow-hidden pb-8 xl:pb-0">
+              {/* Horizontal slider for mobile/tablet (< 1200px) */}
               <motion.div
-                className="flex flex-col gap-6"
+                className="flex xl:hidden gap-6"
+                animate={{
+                  x: [0, -1 * (280 + 24) * sliderImages.length],
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 20,
+                    ease: "linear",
+                  },
+                }}
+              >
+                {duplicatedImages.map((item, index) => (
+                  <div
+                    key={`h-${item.id}-${index}`}
+                    className="flex-shrink-0 w-[280px] h-[280px] rounded-[32px] overflow-hidden"
+                  >
+                    <img
+                      src={item.image}
+                      alt={`Slide ${item.id}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* Vertical slider for desktop (>= 1200px) */}
+              <motion.div
+                className="hidden xl:flex flex-col gap-6 justify-end"
                 animate={{
                   y: [0, -1 * (330 + 24) * sliderImages.length],
                 }}
