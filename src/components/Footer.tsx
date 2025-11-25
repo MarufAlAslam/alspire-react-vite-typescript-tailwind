@@ -1,90 +1,150 @@
+import { Instagram, Dribbble, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import { Github, Twitter, Linkedin } from "lucide-react";
+
+// Custom X (Twitter) Icon Component
+const XIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
+const footerLinks = {
+  quickLinks: [
+    { label: "Home", href: "#" },
+    { label: "Features", href: "#" },
+    { label: "Pricing", href: "#" },
+    { label: "Contact", href: "#" },
+  ],
+  legalLinks: [
+    { label: "Terms Of Service", href: "#" },
+    { label: "Privacy Policy", href: "#" },
+    { label: "Cookie Policy", href: "#" },
+    { label: "GDPR Compliance", href: "#" },
+  ],
+  supportLinks: [
+    { label: "Email Support", href: "#" },
+    { label: "Phone Support", href: "#" },
+  ],
+};
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: Twitter, label: "Twitter", href: "#" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
+  { icon: XIcon, href: "#", label: "X" },
+  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Dribbble, href: "#", label: "Dribbble" },
+  { icon: Mail, href: "#", label: "Email" },
 ];
 
 export function Footer() {
   return (
-    <footer className="w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h3 className="text-lg font-semibold mb-4">About</h3>
-            <p className="text-sm text-muted-foreground">
-              A modern React application showcasing the power of Vite, Tailwind
-              CSS v4, shadcn/ui, and Framer Motion.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {["Home", "Features", "Documentation", "Contact"].map((link) => (
-                <li key={link}>
-                  <motion.a
-                    href="#"
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    {link}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h3 className="text-lg font-semibold mb-4">Connect</h3>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
-              ))}
+    <>
+      <footer className="bg-[#F5F5F5] py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-[20px] font-bold text-black mb-6">Quick Links</h3>
+              <ul className="space-y-3">
+                {footerLinks.quickLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-[16px] text-gray-600 hover:text-black transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </motion.div>
-        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="border-t pt-8 text-center"
-        >
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Your Company. Built with ❤️ using
-            modern web technologies.
-          </p>
-        </motion.div>
+            {/* Legal Links */}
+            <div>
+              <h3 className="text-[20px] font-bold text-black mb-6">Legal Links</h3>
+              <ul className="space-y-3">
+                {footerLinks.legalLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-[16px] text-gray-600 hover:text-black transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Support & Contact */}
+            <div>
+              <h3 className="text-[20px] font-bold text-black mb-6">
+                Support & Contact
+              </h3>
+              <ul className="space-y-3">
+                {footerLinks.supportLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-[16px] text-gray-600 hover:text-black transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Stay Connect */}
+            <div>
+              <h3 className="text-[20px] font-bold text-black mb-6">Stay Connect</h3>
+              <div className="flex gap-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    className="w-10 h-10 flex items-center justify-center text-black hover:text-blue-600 transition-colors"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-6 h-6" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-gray-300 mt-12"></div>
+        </div>
+      </footer>
+
+      {/* Full Width Alspire SVG Logo with Animation */}
+      <div className="bg-[#F5F5F5] pb-8 px-5 md:px-[30px] overflow-hidden" style={{ perspective: '1000px' }}>
+        <motion.img
+          src="/src/assets/aispire.svg"
+          alt="Alspire"
+          className="w-full h-auto"
+          initial={{ 
+            opacity: 0.4,
+            rotateX: 35,
+            y: 30
+          }}
+          whileInView={{ 
+            opacity: 1,
+            rotateX: 0,
+            y: 0
+          }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{
+            duration: 1,
+            ease: [0.25, 0.1, 0.25, 1]
+          }}
+          style={{ transformStyle: 'preserve-3d' }}
+        />
       </div>
-    </footer>
+    </>
   );
 }

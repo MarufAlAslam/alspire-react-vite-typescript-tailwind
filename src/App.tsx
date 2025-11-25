@@ -8,6 +8,7 @@ import { Pricing } from "./components/Pricing";
 import { Testimonials } from "./components/Testimonials";
 import { FAQ } from "./components/FAQ";
 import { CTA } from "./components/CTA";
+import { Footer } from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
       <Testimonials />
       <FAQ />
       <CTA />
+      <Footer />
     </div>
   );
 }
