@@ -15,7 +15,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center bg-blue-600 text-white rounded-full text-sm font-medium overflow-hidden border-2 border-blue-600"
+          className="inline-flex items-center bg-blue-600 text-white rounded-full text-sm font-medium overflow-hidden border-2 border-blue-600 mt-28"
         >
           <span className="bg-white text-blue-600 px-4 py-2">New Feature</span>
           <span className="px-4 py-2">Predictive Insights</span>
