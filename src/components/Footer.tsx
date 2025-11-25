@@ -44,9 +44,9 @@ export function Footer() {
     <>
       <footer className="bg-[#F5F5F5] py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 xl:grid-cols-4 gap-8 xl:gap-0 text-center xl:text-left">
             {/* Quick Links */}
-            <div>
+            <div className="flex flex-col items-center xl:items-start">
               <h3 className="text-[20px] font-bold text-black mb-6">Quick Links</h3>
               <ul className="space-y-3">
                 {footerLinks.quickLinks.map((link) => (
@@ -63,7 +63,7 @@ export function Footer() {
             </div>
 
             {/* Legal Links */}
-            <div>
+            <div className="flex flex-col items-center xl:items-start">
               <h3 className="text-[20px] font-bold text-black mb-6">Legal Links</h3>
               <ul className="space-y-3">
                 {footerLinks.legalLinks.map((link) => (
@@ -80,7 +80,7 @@ export function Footer() {
             </div>
 
             {/* Support & Contact */}
-            <div>
+            <div className="flex flex-col items-center xl:items-start">
               <h3 className="text-[20px] font-bold text-black mb-6">
                 Support & Contact
               </h3>
@@ -99,9 +99,9 @@ export function Footer() {
             </div>
 
             {/* Stay Connect - spans full width on mobile/tablet, 1 column on desktop */}
-            <div className="col-span-3 xl:col-span-1">
+            <div className="flex flex-col items-center xl:items-start">
               <h3 className="text-[20px] font-bold text-black mb-6">Stay Connect</h3>
-              <div className="flex gap-4">
+              <div className="flex gap-4 justify-center xl:justify-start">
                 {socialLinks.map((social) => (
                   <a
                     key={social.label}
