@@ -47,21 +47,30 @@ function Card({ card, index }: { card: typeof cards[0]; index: number }) {
     [0.92, 1]
   );
 
+  const topPosition = `calc(150px + ${index * 25}px)`;
+
   return (
     <motion.div
       ref={ref}
       style={{
         scale,
-        top: `calc(150px + ${index * 25}px)`,
         backgroundColor: card.bg,
       }}
-      className="sticky rounded-[60px] min-h-[500px] flex items-center overflow-hidden z-10"
+      className="md:sticky rounded-[60px] min-h-[500px] flex items-center overflow-hidden z-10 mb-8 md:mb-0"
+      data-index={index}
     >
+      <style>{`
+        @media (min-width: 768px) {
+          [data-index="${index}"] {
+            top: ${topPosition};
+          }
+        }
+      `}</style>
       <div className="grid md:grid-cols-2 w-full h-full">
         {card.imagePosition === "left" ? (
           <>
-            {/* Left Image */}
-            <div className="h-full">
+            {/* Left Image - Desktop / Bottom - Mobile */}
+            <div className="h-full order-2 md:order-1">
               <img
                 src={card.image}
                 alt={card.title}
@@ -69,9 +78,9 @@ function Card({ card, index }: { card: typeof cards[0]; index: number }) {
               />
             </div>
             
-            {/* Right Content */}
-            <div className="flex flex-col justify-center px-16 py-12">
-              <h2 className="text-[50px] font-bold leading-[1.1] mb-6" style={{ color: "#1e1e1e" }}>
+            {/* Right Content - Desktop / Top - Mobile */}
+            <div className="flex flex-col justify-center px-8 md:px-16 py-8 md:py-12 order-1 md:order-2">
+              <h2 className="text-[30px] xl:text-[40px] font-bold leading-[1.1] mb-6" style={{ color: "#1e1e1e" }}>
                 {card.title}
               </h2>
 
@@ -82,9 +91,9 @@ function Card({ card, index }: { card: typeof cards[0]; index: number }) {
           </>
         ) : (
           <>
-            {/* Left Content */}
-            <div className="flex flex-col justify-center px-16 py-12">
-              <h2 className="text-[50px] font-bold leading-[1.1] mb-6" style={{ color: "#1e1e1e" }}>
+            {/* Left Content - Desktop / Top - Mobile */}
+            <div className="flex flex-col justify-center px-8 md:px-16 py-8 md:py-12 order-1">
+              <h2 className="text-[30px] xl:text-[40px] font-bold leading-[1.1] mb-6" style={{ color: "#1e1e1e" }}>
                 {card.title}
               </h2>
 
@@ -93,8 +102,8 @@ function Card({ card, index }: { card: typeof cards[0]; index: number }) {
               </p>
             </div>
 
-            {/* Right Image */}
-            <div className="h-full">
+            {/* Right Image - Desktop / Bottom - Mobile */}
+            <div className="h-full order-2">
               <img
                 src={card.image}
                 alt={card.title}

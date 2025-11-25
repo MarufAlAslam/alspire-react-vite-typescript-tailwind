@@ -39,9 +39,9 @@ export function CTA() {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col md:flex-row flex-wrap gap-4">
                 <motion.button
-                  className="bg-white text-black rounded-[15px] py-[14px] px-[20px] text-[18px] font-semibold relative overflow-hidden group"
+                  className="w-full md:w-auto bg-white text-black rounded-[15px] py-[14px] px-[20px] text-[18px] font-semibold relative overflow-hidden group"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -56,7 +56,7 @@ export function CTA() {
                 </motion.button>
 
                 <motion.button
-                  className="bg-transparent border-2 border-white text-white rounded-[15px] py-[14px] px-[20px] text-[18px] font-semibold relative overflow-hidden group flex items-center gap-2"
+                  className="w-full md:w-auto bg-transparent text-white rounded-[15px] py-[14px] px-[20px] text-[18px] font-semibold relative overflow-hidden group flex items-center gap-2 justify-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -98,33 +98,33 @@ export function CTA() {
               </motion.div>
 
               {/* Vertical slider for desktop (>= 1200px) */}
-              <motion.div
-                className="hidden xl:flex flex-col gap-6 justify-end"
-                animate={{
-                  y: [0, -1 * (330 + 24) * sliderImages.length],
-                }}
-                transition={{
-                  y: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 20,
-                    ease: "linear",
-                  },
-                }}
-              >
-                {duplicatedImages.map((item, index) => (
-                  <div
-                    key={`${item.id}-${index}`}
-                    className="flex-shrink-0 w-[330px] h-[330px] rounded-[32px] overflow-hidden"
-                  >
-                    <img
-                      src={item.image}
-                      alt={`Slide ${item.id}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </motion.div>
+                <motion.div
+                  className="hidden xl:flex flex-col gap-6 justify-end h-[600px]"
+                  animate={{
+                    y: [0, -1 * (330 + 24) * duplicatedImages.length],
+                  }}
+                  transition={{
+                    y: {
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      duration: 40,
+                      ease: "linear",
+                    },
+                  }}
+                >
+                  {duplicatedImages.map((item, index) => (
+                    <div
+                      key={`${item.id}-${index}`}
+                      className="flex-shrink-0 w-[330px] h-[330px] rounded-[32px] overflow-hidden"
+                    >
+                      <img
+                        src={item.image}
+                        alt={`Slide ${item.id}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </motion.div>
             </div>
           </div>
         </div>

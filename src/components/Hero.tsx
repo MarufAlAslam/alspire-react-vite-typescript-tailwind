@@ -49,9 +49,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-wrap gap-4 justify-center pt-2"
+          className="flex flex-col md:flex-row flex-wrap gap-4 justify-center pt-2 w-full max-w-md mx-auto md:max-w-none"
         >
-          <button className="bg-black text-white text-[16px] font-semibold px-8 py-[14px] rounded-[15px] transition-all duration-200 relative overflow-hidden group flex items-center justify-center">
+          <button className="w-full md:w-auto bg-black text-white text-[16px] font-semibold px-8 py-[14px] rounded-[15px] transition-all duration-200 relative overflow-hidden group flex items-center justify-center">
             <span className="inline-block transition-transform duration-300 ease-in-out group-hover:-translate-y-[150%] whitespace-nowrap">
               Get Started
             </span>
@@ -60,7 +60,7 @@ export function Hero() {
             </span>
           </button>
 
-          <button className="bg-white border-2 border-gray-200 text-black text-[16px] font-semibold px-8 py-[14px] rounded-[15px] transition-all duration-200 relative overflow-hidden group flex items-center justify-center">
+          <button className="w-full md:w-auto bg-white border-2 border-gray-200 text-black text-[16px] font-semibold px-8 py-[14px] rounded-[15px] transition-all duration-200 relative overflow-hidden group flex items-center justify-center">
             <span className="transition-transform duration-300 ease-in-out group-hover:-translate-y-[150%] whitespace-nowrap flex items-center gap-2">
               Request a Demo
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,6 +113,12 @@ export function Hero() {
         
         .animate-scroll {
           animation: scroll 20s linear infinite;
+        }
+        
+        @media (max-width: 768px) {
+          .animate-scroll {
+            animation: scroll 12s linear infinite;
+          }
         }
         
         .animate-scroll:hover {
