@@ -56,7 +56,7 @@ function Card({ card, index }: { card: typeof cards[0]; index: number }) {
         scale,
         backgroundColor: card.bg,
       }}
-      className="md:sticky rounded-[60px] min-h-[500px] flex items-center overflow-hidden z-10 mb-8 md:mb-0"
+      className="md:sticky rounded-[60px] flex items-center overflow-hidden z-10 mb-8 md:mb-0"
       data-index={index}
     >
       <style>{`
@@ -80,7 +80,7 @@ function Card({ card, index }: { card: typeof cards[0]; index: number }) {
             
             {/* Right Content - Desktop / Top - Mobile */}
             <div className="flex flex-col justify-center px-8 md:px-16 py-8 md:py-12 order-1 md:order-2">
-              <h2 className="text-[30px] xl:text-[40px] font-bold leading-[1.1] mb-6" style={{ color: "#1e1e1e" }}>
+              <h2 className="text-[48px] xl:text-[58px] font-bold leading-[1] mb-6" style={{ color: "#1e1e1e" }}>
                 {card.title}
               </h2>
 
@@ -93,7 +93,7 @@ function Card({ card, index }: { card: typeof cards[0]; index: number }) {
           <>
             {/* Left Content - Desktop / Top - Mobile */}
             <div className="flex flex-col justify-center px-8 md:px-16 py-8 md:py-12 order-1">
-              <h2 className="text-[30px] xl:text-[40px] font-bold leading-[1.1] mb-6" style={{ color: "#1e1e1e" }}>
+              <h2 className="text-[48px] xl:text-[58px] font-bold leading-[1] mb-6" style={{ color: "#1e1e1e" }}>
                 {card.title}
               </h2>
 
