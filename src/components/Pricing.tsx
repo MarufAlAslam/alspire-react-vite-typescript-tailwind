@@ -16,7 +16,7 @@ const plans = [
   {
     id: 2,
     badge: "Pro",
-    badgeBg: "#E5EEFF",
+    badgeBg: "#F7F7F7",
     price: "$159",
     period: "/year",
     description: "Advanced features and dedicated support for growing teams.",
@@ -63,27 +63,26 @@ export function Pricing() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white border-2 border-[#F5F5F5] rounded-[40px] p-6 md:p-8 relative"
               >
-                {/* Badge */}
-                <div className="flex justify-end mb-6">
-                  <span
-                    className="px-4 py-1 rounded-full text-sm font-medium"
-                    style={{
-                      backgroundColor: plan.badgeBg || "#1E1E1E",
-                      color: plan.badgeBg ? "#1E1E1E" : "#FFFFFF",
-                    }}
-                  >
-                    {plan.badge}
-                  </span>
-                </div>
-
-                {/* Price */}
+                {/* Price (inline with badge) */}
                 <div className="mb-6">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-[60px] font-bold leading-none" style={{ color: "#1E1E1E" }}>
-                      {plan.price}
-                    </span>
-                    <span className="text-[40px] font-medium" style={{ color: "#B3B3B3" }}>
-                      {plan.period}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-baseline font-britti gap-1">
+                      <span className="text-[60px] font-bold leading-none" style={{ color: "#1E1E1E" }}>
+                        {plan.price}
+                      </span>
+                      <span className="text-[40px] font-medium" style={{ color: "#B3B3B3" }}>
+                        {plan.period}
+                      </span>
+                    </div>
+
+                    <span
+                      className="ml-4 px-6 py-2.5 rounded-full text-base font-semibold whitespace-nowrap"
+                      style={{
+                        backgroundColor: plan.badgeBg || "#e5eeff",
+                        color: plan.badgeBg ? "#1E1E1E" : "#0051FF",
+                      }}
+                    >
+                      {plan.badge}
                     </span>
                   </div>
                 </div>
@@ -108,7 +107,7 @@ export function Pricing() {
 
                 {/* Button */}
                 <motion.button
-                  className="w-full bg-black text-white rounded-full py-4 px-8 text-[16px] font-semibold relative overflow-hidden group"
+                  className="w-full bg-black text-white rounded-[15px] py-3.5 px-8 text-lg font-semibold relative overflow-hidden group"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
