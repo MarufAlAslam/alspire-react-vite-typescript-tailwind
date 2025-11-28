@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Local font import */
+@font-face {
+  font-family: 'Britti Sans';
+  src: url('./fonts/BrittiSansTrial-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utility class to use Britti Sans */
+.font-britti {
+  font-family: 'Britti Sans', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
 @layer base {
   html {
     scroll-behavior: auto;

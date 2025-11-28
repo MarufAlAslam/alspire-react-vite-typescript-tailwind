@@ -30,7 +30,7 @@ export function CTA() {
               <span className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
                 Get Started Now!
               </span>
-              <h2 className="text-[40px] xl:text-[60px] font-bold leading-[1.1] text-white mb-6">
+              <h2 className="text-[48px] xl:text-[68px] font-britti font-bold leading-[1] text-white mb-6">
                 Ready to Unlock the Power of AI with Alspire?
               </h2>
               <p className="text-[18px] text-gray-400 mb-8 leading-relaxed">

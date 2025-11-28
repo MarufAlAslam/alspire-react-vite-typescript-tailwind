@@ -45,7 +45,7 @@ export function Pricing() {
             <span className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
               Pricing
             </span>
-            <h2 className="text-[40px] xl:text-[60px] font-bold leading-[1.1]">
+            <h2 className="text-[48px] xl:text-[68px] font-bold leading-[1] font-britti">
               <span className="text-black">Simple Pricing,</span>
               <br />
               <span className="text-black">Powerful AI</span>

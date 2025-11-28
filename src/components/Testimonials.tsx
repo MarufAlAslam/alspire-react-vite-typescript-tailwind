@@ -39,7 +39,7 @@ export function Testimonials() {
           <span className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
             Testimonials
           </span>
-          <h2 className="text-[40px] xl:text-[60px] font-bold leading-[1.1] text-black">
+          <h2 className="text-[48px] xl:text-[68px] font-bold leading-[1] text-black font-britti">
             What Our Clients Say
           </h2>
         </div>

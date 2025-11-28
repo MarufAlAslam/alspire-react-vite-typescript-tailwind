@@ -21,7 +21,7 @@ export function Header() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="sticky top-0 xl:top-8 left-0 right-0 z-50 xl:flex xl:justify-center xl:px-4"
+      className="sticky top-0 xl:top-8 left-0 right-0 z-50 xl:flex xl:justify-center xl:px-4 mx-auto max-w-[840px]"
     >
       <nav
         className={`

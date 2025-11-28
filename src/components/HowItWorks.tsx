@@ -54,7 +54,7 @@ export function HowItWorks() {
                         How It Works
                     </span>
                     <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-8">
-                        <h2 className="text-[40px] xl:text-[60px] font-bold leading-[1.1]">
+                        <h2 className="text-[48px] xl:text-[68px] font-bold leading-[1] font-britti">
                             How AIspire Works
                         </h2>
                         <p className="text-[18px] xl:max-w-xl xl:pt-2" style={{ color: "#1e1e1e" }}>

@@ -52,7 +52,7 @@ export function FAQ() {
             <span className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
               FAQ
             </span>
-            <h2 className="text-[40px] xl:text-[60px] font-bold leading-[1.1] text-black mb-8">
+            <h2 className="text-[48px] xl:text-[68px] font-britti font-bold leading-[1] text-black mb-8">
               Frequently Asked Questions
             </h2>
             <motion.button
