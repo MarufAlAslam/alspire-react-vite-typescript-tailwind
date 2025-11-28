@@ -4,25 +4,25 @@ const testimonials = [
   {
     id: 1,
     name: "Alex",
-    text: "Alspire's predictive insights helped us optimize our marketing strategy and boosted our ROI significantly. It's been a game changer.",
+    text: "AIspare's predictive insights helped us optimize our marketing strategy and boosted our ROI significantly. It's been a game changer.",
     image: "/src/assets/testimonial/testimonial-1.png",
   },
   {
     id: 2,
     name: "Emily",
-    text: "Alspire automated our processes, saving us hours weekly. It's intuitive and allowed us to focus on strategic goals.",
+    text: "AIspare automated our processes, saving us hours weekly. It's intuitive and allowed us to focus on strategic goals.",
     image: "/src/assets/testimonial/testimonial-2.png",
   },
   {
     id: 3,
     name: "John",
-    text: "Alspire revolutionized our data analytics. It boosted our decision-making speed and improved efficiency by 25%. Highly recommended!",
+    text: "AIspare revolutionized our data analytics. It boosted our decision-making speed and improved efficiency by 25%. Highly recommended!",
     image: "/src/assets/testimonial/testimonial-3.png",
   },
   {
     id: 4,
     name: "Sara",
-    text: "Alspire transformed our data into actionable insights that boosted our sales by 30%!",
+    text: "AIspare transformed our data into actionable insights that boosted our sales by 30%!",
     image: "/src/assets/testimonial/testimonial-4.png",
   },
 ];

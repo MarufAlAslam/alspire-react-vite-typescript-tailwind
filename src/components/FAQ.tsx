@@ -5,26 +5,26 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 const faqs = [
   {
     id: 1,
-    question: "What Is Alspire?",
+    question: "What Is AIspare?",
     answer:
-      "Alspire Is An AI-Powered SaaS Platform Designed To Help Businesses Leverage Artificial Intelligence For Data Analysis, Predictive Insights, Automation, And More.",
+      "AIspare Is An AI-Powered SaaS Platform Designed To Help Businesses Leverage Artificial Intelligence For Data Analysis, Predictive Insights, Automation, And More.",
     defaultOpen: true,
   },
   {
     id: 2,
-    question: "How Can Alspire Help My Business?",
+    question: "How Can AIspare Help My Business?",
     answer:
-      "Alspire helps businesses automate processes, gain predictive insights, analyze data more efficiently, and make data-driven decisions that boost productivity and ROI.",
+      "AIspare helps businesses automate processes, gain predictive insights, analyze data more efficiently, and make data-driven decisions that boost productivity and ROI.",
   },
   {
     id: 3,
-    question: "Is Alspire Suitable For Small Businesses?",
+    question: "Is AIspare Suitable For Small Businesses?",
     answer:
-      "Yes! Alspire offers flexible pricing plans that cater to businesses of all sizes, from startups to large enterprises. Our platform scales with your needs.",
+      "Yes! AIspare offers flexible pricing plans that cater to businesses of all sizes, from startups to large enterprises. Our platform scales with your needs.",
   },
   {
     id: 4,
-    question: "What Kind Of Support Does Alspire Offer?",
+    question: "What Kind Of Support Does AIspare Offer?",
     answer:
       "We provide email support for basic plans and priority support with dedicated account management for our premium plans. Our team is always ready to help you succeed.",
   },
@@ -32,7 +32,7 @@ const faqs = [
     id: 5,
     question: "Can I Customize AI Models To Suit My Industry Needs?",
     answer:
-      "Absolutely! Alspire allows you to customize AI models and workflows to match your specific industry requirements and business processes.",
+      "Absolutely! AIspare allows you to customize AI models and workflows to match your specific industry requirements and business processes.",
   },
 ];
 

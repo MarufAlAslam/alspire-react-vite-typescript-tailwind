@@ -33,7 +33,7 @@ export function Header() {
         <div className="flex items-center justify-between px-8 py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="Alspire" className="h-[22px]" />
+            <img src={logo} alt="AIspare" className="h-[22px]" />
           </div>
 
           {/* Navigation Links - Desktop (1200px+) */}

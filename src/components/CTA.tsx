@@ -31,7 +31,7 @@ export function CTA() {
                 Get Started Now!
               </span>
               <h2 className="text-[48px] xl:text-[68px] font-britti font-bold leading-[1] text-white mb-6">
-                Ready to Unlock the Power of AI with Alspire?
+                Ready to Unlock the Power of AI with AIspare?
               </h2>
               <p className="text-[18px] text-gray-400 mb-8 leading-relaxed">
                 Start Using Our AI-Driven Solutions Today And Transform Your

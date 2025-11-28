@@ -1,4 +1,4 @@
-# Alspire - Modern React App
+# AIspare - Modern React App
 
 A fully responsive React application built with modern web technologies.
 
@@ -7,34 +7,47 @@ A fully responsive React application built with modern web technologies.
 - **Vite** - Lightning-fast build tool
 - **React 18** - Latest React with TypeScript
 - **Tailwind CSS v4** - Utility-first CSS framework (latest beta)
-- **shadcn/ui** - High-quality component library
-- **Framer Motion** - Production-ready animations
-- **Lucide React** - Beautiful icon library
+<!--
+ 	AIspare — polished README
+	Purpose: present the project clearly to collaborators and reviewers,
+	provide fast setup steps, and highlight important dev notes.
+-->
 
-## ✨ Features
+# AIspare — AI Landing (Vite + React + TypeScript)
 
-- ⚡ Lightning-fast development with Vite
-- 🎨 Beautiful UI with shadcn/ui components
-- 🌈 Tailwind CSS v4 with custom design tokens
-- 🎭 Smooth animations with Framer Motion
-- 📱 Fully responsive design (mobile, tablet, desktop)
-- 🎯 TypeScript for type safety
-- 🎪 Modern component architecture
+AIspare is a modern, responsive landing page prototype for an AI product. It showcases a clean component structure, motion-rich interactions, and mobile-first design.
 
-## 🛠️ Setup
+Why this repo
+---------------
 
-### Prerequisites
+- Fast dev experience with Vite
+- Type-safe components with TypeScript
+- Tailwind CSS for rapid styling and consistent design tokens
+- Framer Motion for smooth, production-ready animations
 
-- Node.js 20.19+ or 22.12+ (current: check with \`node -v\`)
-- npm or yarn
+Key features
+------------
 
-### Installation
+- Hero with dynamic marquee and local font support
+- Features, How it Works, Pricing, CTA, FAQ, Testimonials, Footer
+- Responsive breakpoints: mobile, tablet, and desktop (custom `xl` at 1200px)
+- Image cards use `object-cover` to maintain visual balance across sizes
 
-\`\`\`bash
+Quick start
+-----------
+
+Prerequisites
+
+- Node.js (v16+ recommended)
+- npm (or pnpm)
+
+Install and run
+
+```bash
 # Install dependencies
 npm install
 
-# Start development server
+# Start development server (hot reload)
 npm run dev
 
 # Build for production
@@ -42,73 +55,62 @@ npm run build
 
 # Preview production build
 npm run preview
-\`\`\`
+```
 
-## 📁 Project Structure
+Project layout
+--------------
 
-\`\`\`
+```
 src/
-├── components/
-│   ├── ui/              # shadcn/ui components
-│   │   ├── button.tsx
-│   │   └── card.tsx
-│   ├── Hero.tsx         # Hero section with animations
-│   ├── Showcase.tsx     # Features showcase
-│   └── Footer.tsx       # Footer component
-├── lib/
-│   └── utils.ts         # Utility functions
-├── App.tsx              # Main app component
-├── index.css            # Tailwind CSS imports
-└── main.tsx             # App entry point
-\`\`\`
+├── assets/            # images, svgs, fonts (local font at src/fonts)
+├── components/        # React components (Hero, Features, CTA, Footer, etc.)
+├── lib/               # helpers and utilities
+├── index.css          # Tailwind + global styles + @font-face
+└── main.tsx           # Vite entry
+```
 
-## 🎨 Customization
+Styling & fonts
+---------------
 
-### Colors
+- Global styles live in `src/index.css`. The local font `BrittiSansTrial-Bold.otf` is registered via `@font-face` and a utility `.font-britti` is provided.
+- Tailwind config: `tailwind.config.js` — add custom fonts to `theme.extend.fontFamily` if you want `font-britti` as a Tailwind utility.
 
-The app uses CSS variables for theming. Edit \`src/index.css\` to customize:
+Important development notes
+---------------------------
 
-- \`--primary\` - Primary brand color
-- \`--secondary\` - Secondary color
-- \`--background\` - Background color
-- \`--foreground\` - Text color
+- If images don't appear during development, check filenames (case-sensitive) and restart the dev server.
+- The CTA slider has separate behaviors for mobile (horizontal) and desktop (vertical); duplicated image arrays enable seamless loops.
+- Use `object-cover` on image elements to ensure images always fill card height and crop appropriately.
 
-### Components
+Accessibility & performance
+---------------------------
 
-All UI components are located in \`src/components/ui/\`. You can add more shadcn/ui components or create your own.
+- Consider `prefers-reduced-motion` for users who prefer less animation.
+- Optimize images for web (WebP where possible) to improve load times.
 
-### Animations
+Contributing
+------------
 
-Framer Motion animations are configured in each component. Adjust the \`initial\`, \`animate\`, and \`transition\` props to customize.
+Contributions are welcome. For UI tweaks or fixes:
 
-## 📱 Responsive Design
+1. Fork or branch from `main`.
+2. Implement and test changes across breakpoints.
+3. Open a PR with a clear description.
 
-The application is fully responsive with breakpoints:
-- Mobile: < 768px
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
+Need help?
+-----------
 
-## 🚀 Deployment
+If you want I can:
 
-Build the project for production:
+- Add deployment instructions for Vercel/Netlify
+- Add Tailwind font-family config so `font-britti` is available via Tailwind utilities
+- Generate social favicons and meta tags for improved sharing
 
-\`\`\`bash
-npm run build
-\`\`\`
+License
+-------
 
-The build output will be in the \`dist/\` directory, ready to deploy to any static hosting service.
+This repository is provided for demo and development purposes. Add a license that suits your project before publishing.
 
-## 🌐 Development Server
+---
 
-The dev server is running at: http://localhost:5173/
-
-Open the URL in your browser to see the application.
-
-## 📝 License
-
-MIT
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open issues and pull requests.
-# alspire-react-vite-typescript-tailwind
+Happy building! 🚀

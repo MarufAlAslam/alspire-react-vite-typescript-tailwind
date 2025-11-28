@@ -121,11 +121,11 @@ export function Footer() {
         </div>
       </footer>
 
-      {/* Full Width Alspire SVG Logo with Animation */}
+      {/* Full Width AIspare SVG Logo with Animation */}
       <div className="bg-[#F5F5F5] pb-8 px-5 md:px-[30px] overflow-hidden" style={{ perspective: '1000px' }}>
         <motion.img
           src="/src/assets/aispire.svg"
-          alt="Alspire"
+          alt="AIspare"
           className="w-full h-auto"
           initial={{ 
             opacity: 0.4,
