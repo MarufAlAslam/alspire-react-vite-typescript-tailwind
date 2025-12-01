@@ -8,14 +8,14 @@ const sliderImages = [slider1, slider2, slider3, slider4];
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 xl:px-0 pb-24 bg-gradient-to-b from-background to-secondary/20">
-      <div className="max-w-5xl mx-auto text-center mb-12 space-y-6">
+    <section className="min-h-screen flex flex-col items-center justify-center sm:px-4 px-0 xl:px-0 pb-24 bg-gradient-to-b from-background to-secondary/20">
+      <div className="max-w-5xl mx-auto text-center mb-12 sm:px-0 px-4 space-y-6">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center bg-[#0051FF] text-white rounded-[15px] text-sm font-medium overflow-hidden border-[3px] border-[#0051FF] mt-28"
+          className="inline-flex items-center bg-[#0051FF] text-white rounded-[15px] text-sm font-medium overflow-hidden border-[3px] border-[#0051FF] sm:mt-28 mt-8"
         >
           <span className="bg-[#3374ff] rounded-[12px] text-white text-base font-medium px-3.5 py-2">New Feature:</span>
           <span className="px-4 py-2 text-base font-medium">Predictive Insights</span>
@@ -38,7 +38,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-[24px] font-medium text-gray-600 max-w-3xl mx-auto leading-[1.4]"
+          className="sm:text-2xl text-lg font-medium text-gray-600 max-w-3xl mx-auto leading-[1.4]"
         >
           Unlock the potential of AI to streamline processes, boost productivity,
           and drive innovation with AIspire.
@@ -84,12 +84,12 @@ export function Hero() {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="w-full overflow-hidden relative"
       >
-        <div className="flex mt-20 animate-scroll gap-6">
+        <div className="flex sm:mt-20 animate-scroll gap-6">
           {/* Repeat images multiple times for seamless loop */}
           {[...sliderImages, ...sliderImages].map((img, index) => (
             <div
               key={index}
-              className="flex-shrink-0 h-[330px] w-auto"
+              className="flex-shrink-0 sm:h-[330px] h-[250px] w-auto"
             >
               <img
                 src={img}
