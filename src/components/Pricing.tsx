@@ -53,7 +53,7 @@ export function Pricing() {
           </div>
 
           {/* Pricing Cards */}
-          <div className="grid xl:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid xl:grid-cols-2 gap-8 sm:max-w-5xl max-w-full mx-auto">
             {plans.map((plan, index) => (
               <motion.div
                 key={plan.id}
@@ -61,11 +61,11 @@ export function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white border-2 border-[#F5F5F5] rounded-[40px] p-6 md:p-8 relative"
+                className="bg-white border-2 border-[#F5F5F5] max-w-full rounded-[40px] p-6 md:p-8 relative"
               >
                 {/* Price (inline with badge) */}
                 <div className="mb-6">
-                  <div className="flex items-center justify-between">
+                  <div className="flex sm:flex-row flex-col-reverse sm:gap-0 gap-4 sm:items-center items-start justify-between">
                     <div className="flex items-baseline font-britti gap-1">
                       <span className="text-[60px] font-bold leading-none" style={{ color: "#1E1E1E" }}>
                         {plan.price}
@@ -76,7 +76,7 @@ export function Pricing() {
                     </div>
 
                     <span
-                      className="ml-4 px-6 py-2.5 rounded-full text-base font-semibold whitespace-nowrap"
+                      className="sm:ml-4 px-6 py-2.5 rounded-full text-base font-semibold whitespace-nowrap"
                       style={{
                         backgroundColor: plan.badgeBg || "#e5eeff",
                         color: plan.badgeBg ? "#1E1E1E" : "#0051FF",
