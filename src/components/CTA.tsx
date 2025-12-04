@@ -4,15 +4,15 @@ import { ChevronRight } from "lucide-react";
 const sliderImages = [
   {
     id: 1,
-    image: "/src/assets/v-slider/v-slider-1.png",
+    image: "../assets/v-slider/v-slider-1.png",
   },
   {
     id: 2,
-    image: "/src/assets/v-slider/v-slider-2.png",
+    image: "../assets/v-slider/v-slider-2.png",
   },
   {
     id: 3,
-    image: "/src/assets/v-slider/v-slider-3.png",
+    image: "../assets/v-slider/v-slider-3.png",
   },
 ];
 

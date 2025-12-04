@@ -124,7 +124,7 @@ export function Footer() {
       {/* Full Width AIspare SVG Logo with Animation */}
       <div className="bg-[#F5F5F5] pb-8 px-5 md:px-[30px] overflow-hidden" style={{ perspective: '1000px' }}>
         <motion.img
-          src="/src/assets/aispire.svg"
+          src="../assets/aispire.svg"
           alt="AIspare"
           className="w-full h-auto"
           initial={{ 
