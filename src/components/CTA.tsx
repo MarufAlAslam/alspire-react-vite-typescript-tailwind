@@ -1,18 +1,21 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import vSlider1 from "../assets/v-slider/v-slider-1.png";
+import vSlider2 from "../assets/v-slider/v-slider-2.png";
+import vSlider3 from "../assets/v-slider/v-slider-3.png";
 
 const sliderImages = [
   {
     id: 1,
-    image: "../assets/v-slider/v-slider-1.png",
+    image: vSlider1,
   },
   {
     id: 2,
-    image: "../assets/v-slider/v-slider-2.png",
+    image: vSlider2,
   },
   {
     id: 3,
-    image: "../assets/v-slider/v-slider-3.png",
+    image: vSlider3,
   },
 ];
 

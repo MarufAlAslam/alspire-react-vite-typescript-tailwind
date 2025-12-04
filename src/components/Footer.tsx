@@ -1,5 +1,6 @@
 import { Instagram, Dribbble, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import aispareLogo from "../assets/aispire.svg";
 
 // Custom X (Twitter) Icon Component
 const XIcon = ({ className }: { className?: string }) => (
@@ -124,7 +125,7 @@ export function Footer() {
       {/* Full Width AIspare SVG Logo with Animation */}
       <div className="bg-[#F5F5F5] pb-8 px-5 md:px-[30px] overflow-hidden" style={{ perspective: '1000px' }}>
         <motion.img
-          src="../assets/aispire.svg"
+          src={aispareLogo}
           alt="AIspare"
           className="w-full h-auto"
           initial={{ 
